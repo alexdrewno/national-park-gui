@@ -8,4 +8,6 @@ API : https://www.nps.gov/subjects/digital/nps-data-api.htm
 
 CURL (To handle google maps requests) : https://curl.haxx.se/libcurl/c/example.html
 
+JSONCPP : https://github.com/open-source-parsers/jsoncpp
+
 GOOGLE MAPS API: https://developers.google.com/maps/
