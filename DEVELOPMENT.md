@@ -20,4 +20,4 @@ Before 2nd Code Review Checkpoint:
 
 * Created objects of National Park Info from each state
 
-* Working on data structure and portrayal (using the GUI) *
+* Working on data structure and portrayal (using the GUI)
