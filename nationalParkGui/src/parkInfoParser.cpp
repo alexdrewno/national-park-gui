@@ -27,9 +27,8 @@ string parkInfoParser::getJsonString(string for_state_code) {
     string response_string;
     
     if (curl) {
-        
-        string url = "https://developer.nps.gov/api/v1/parks?stateCode=il&api_key=knbpdf8LwcmTPaY6rigCxQJRFxP6zDRKRbCRSFp7";
-        curl_easy_setopt(curl, CURLOPT_URL, "https://developer.nps.gov/api/v1/parks?stateCode=il&api_key=knbpdf8LwcmTPaY6rigCxQJRFxP6zDRKRbCRSFp7");
+        string url = "https://developer.nps.gov/api/v1/parks?stateCode=" + for_state_code + "&api_key=knbpdf8LwcmTPaY6rigCxQJRFxP6zDRKRbCRSFp7";
+        curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response_string);
         
@@ -79,8 +78,7 @@ vector<parkInfo> parkInfoParser::getJsonFromString(string json_string) {
                                              name));
     }
     
-    
-    cout << park_info_objects.size();
+    cout << park_info_objects.size() << endl;
     return park_info_objects;
 }
 

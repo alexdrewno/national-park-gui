@@ -44,6 +44,12 @@ public:
              string weatherInfo,
              string name);
     string getName();
+    parkInfo closestPark(vector<parkInfo> parks);
+    tuple<double,double> getLatLong();
+    double distanceBetweenParks(parkInfo park_one, parkInfo park_two);
+    static double distanceBetweenLatLong(tuple<double,double> this_lat_long, tuple<double,double> other_lat_long);
+    static parkInfo closestParkToLocation(tuple<double,double> location, vector<parkInfo> parks);
+    static vector<parkInfo> shortestPathBetweenNParks(tuple<double,double> starting_location, int n_parks);
 };
 
 

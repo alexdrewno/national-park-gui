@@ -1,11 +1,20 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxGui.h"
+#include <vector>
 
 class ofApp : public ofBaseApp{
+    
+    ofxPanel gui;
+    ofImage map;
+    vector<ofImage> red_dot_vect;
+    
 
 	public:
 		void setup();
+        void setupParkInfo();
+        void setupRedDots();
 		void update();
 		void draw();
 
@@ -20,5 +29,5 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-		
+        tuple<double,double> scaleLatLong(tuple<double,double> lat_long_to_scale);
 };
