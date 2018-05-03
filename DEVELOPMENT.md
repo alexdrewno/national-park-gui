@@ -21,3 +21,14 @@ Before 2nd Code Review Checkpoint:
 * Created objects of National Park Info from each state
 
 * Working on data structure and portrayal (using the GUI)
+
+Before Final Presentation:
+
+* Added some documentation within the files
+
+* Added some tests to test basic functions
+
+* Finished/Debugged all functionality
+
+* Scaled Locations onto the map of the gui
+
