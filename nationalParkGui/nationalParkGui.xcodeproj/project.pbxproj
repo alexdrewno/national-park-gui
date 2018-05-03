@@ -90,6 +90,9 @@
 		953857B220913DB6002AF3FA /* jsoncpp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = jsoncpp.xcodeproj; path = "../../../../../jsoncpp-master 2/jsoncpp.xcodeproj"; sourceTree = "<group>"; };
 		953857C720914511002AF3FA /* jsoncpp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = jsoncpp.cpp; sourceTree = "<group>"; };
 		953857C920914512002AF3FA /* json-forwards.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "json-forwards.h"; sourceTree = "<group>"; };
+		955F5B41209AB1860003FA88 /* ParserTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ParserTest.cpp; sourceTree = "<group>"; };
+		955F5B44209AB1B00003FA88 /* catch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
+		955F5B45209AB2CB0003FA88 /* ParkInfoTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ParkInfoTest.cpp; sourceTree = "<group>"; };
 		95EB08E12091452400BE505E /* json.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = json.h; sourceTree = "<group>"; };
 		99B37C8367EB4811EEF8E78D /* ofxSliderGroup.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxSliderGroup.cpp; path = ../../../../addons/ofxGui/src/ofxSliderGroup.cpp; sourceTree = SOURCE_ROOT; };
 		AE859610F3926950EBBC8B13 /* ofxButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxButton.cpp; path = ../../../../addons/ofxGui/src/ofxButton.cpp; sourceTree = SOURCE_ROOT; };
@@ -158,6 +161,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		955F5B40209AB0FE0003FA88 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				955F5B44209AB1B00003FA88 /* catch.hpp */,
+				955F5B41209AB1860003FA88 /* ParserTest.cpp */,
+				955F5B45209AB2CB0003FA88 /* ParkInfoTest.cpp */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
 		A763ED608B35AE3310251DEE /* src */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +217,7 @@
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
+				955F5B40209AB0FE0003FA88 /* tests */,
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
 				6948EE371B920CB800B5AC1A /* local_addons */,

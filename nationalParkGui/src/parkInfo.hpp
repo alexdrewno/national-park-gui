@@ -46,10 +46,14 @@ public:
     string getName();
     parkInfo closestPark(vector<parkInfo> parks);
     tuple<double,double> getLatLong();
-    double distanceBetweenParks(parkInfo park_one, parkInfo park_two);
+    static double distanceBetweenParks(parkInfo park_one, parkInfo park_two);
     static double distanceBetweenLatLong(tuple<double,double> this_lat_long, tuple<double,double> other_lat_long);
     static parkInfo closestParkToLocation(tuple<double,double> location, vector<parkInfo> parks);
-    static vector<parkInfo> shortestPathBetweenNParks(tuple<double,double> starting_location, int n_parks);
+    static double sumEdgeWeights(vector<tuple<parkInfo,parkInfo>> paths);
+    static vector<tuple<parkInfo,parkInfo>> mainMinKCycle(vector<parkInfo> vertices, parkInfo start, parkInfo end, int k);
+    static vector<tuple<parkInfo,parkInfo>> minKCycle(vector<parkInfo> vertices, parkInfo start, parkInfo end, int k, vector<bool> visited);
+    void setLatLong(tuple<double,double> lat_long_to_set);
+    static vector<parkInfo> closestParksTo(tuple<double,double> location, vector<parkInfo> parks, int n);
 };
 
 

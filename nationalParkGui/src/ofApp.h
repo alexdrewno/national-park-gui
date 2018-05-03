@@ -30,4 +30,7 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
         tuple<double,double> scaleLatLong(tuple<double,double> lat_long_to_scale);
+        void userInputStateCodeHandler();
+        void userInputClosestPark();
+        void userInputShortestPath();
 };

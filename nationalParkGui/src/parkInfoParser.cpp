@@ -22,6 +22,7 @@ size_t parkInfoParser::WriteCallback(void *contents, size_t size, size_t nmemb, 
     return size * nmemb;
 }
 
+//Makes the api call to get parks for state code
 string parkInfoParser::getJsonString(string for_state_code) {
     auto curl = curl_easy_init();
     string response_string;
@@ -39,6 +40,7 @@ string parkInfoParser::getJsonString(string for_state_code) {
     }
 }
 
+//Gets the park info objects from the string
 vector<parkInfo> parkInfoParser::getJsonFromString(string json_string) {
     Json::Value root;
     Json::Reader reader;
@@ -82,6 +84,7 @@ vector<parkInfo> parkInfoParser::getJsonFromString(string json_string) {
     return park_info_objects;
 }
 
+//Helper function to get lat and long
 vector<string> parkInfoParser::vectorFromString(string from_string) {
     string cur_string = "";
     vector<string> string_vector;
@@ -102,6 +105,7 @@ vector<string> parkInfoParser::vectorFromString(string from_string) {
     return string_vector;
 }
 
+//Getting lat - long from the string 
 tuple<double,double> parkInfoParser::tupleFromString(string from_string) {
     vector<string> latLong_vector = vectorFromString(from_string);
     
@@ -111,8 +115,8 @@ tuple<double,double> parkInfoParser::tupleFromString(string from_string) {
     if(latLong_vector.size() == 2) {
         int lat_index = latLong_vector[0].find(':');
         int long_index = latLong_vector[1].find(':');
-        num_lat = stod(latLong_vector[0].substr(lat_index+1));
-        num_long = stod(latLong_vector[1].substr(long_index+1));
+        num_long = stod(latLong_vector[0].substr(lat_index+1));
+        num_lat = stod(latLong_vector[1].substr(long_index+1));
     
     }
     
